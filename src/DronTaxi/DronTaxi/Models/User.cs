@@ -5,10 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DronTaxi.Shared.Models
+namespace DronTaxi.Models
 {
     public class User : ModelBase
     {
+        public User()
+        {
+            Roles = new List<Role>();
+        }
+
         public int Id { get; set; }
 
         public string UserName { get; set; }
@@ -25,10 +30,14 @@ namespace DronTaxi.Shared.Models
 
         public string Email { get; set; }
 
+
+
         public DateTime? BirthDate { get; set; }
 
         public string Gender { get; set; }
 
         public byte[] Image { get; set; }
+
+        public List<Role> Roles { get;set; }
     }
 }
