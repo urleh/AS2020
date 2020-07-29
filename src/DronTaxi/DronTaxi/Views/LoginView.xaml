@@ -1,0 +1,122 @@
+﻿<catel:UserControl
+    x:Class="DronTaxi.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:catel="http://schemas.catelproject.com">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/DronTaxi;component/Resources/images/flying-taxi.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="0"
+            Orientation="Horizontal">
+            <Image
+                Width="64"
+                Height="64"
+                Margin="8"
+                VerticalAlignment="Center"
+                Source="../Resources/images/Logo_Dron_Taxi.png" />
+            <TextBlock
+                Margin="8"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontSize="32"
+                FontWeight="Bold"
+                Foreground="White"
+                TextAlignment="Center">
+                DRON TAXI
+            </TextBlock>
+        </StackPanel>
+
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="8">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="200" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="8"
+                FontWeight="Bold"
+                Foreground="White">
+                АВТОРИЗАЦИЯ
+            </TextBlock>
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="8"
+                FontWeight="Bold"
+                Foreground="LightGray">
+                Логин
+            </TextBlock>
+            <TextBox
+                Grid.Row="2"
+                Height="34"
+                VerticalContentAlignment="Center"
+                Grid.Column="0"
+                Grid.ColumnSpan="2" />
+
+            <TextBlock
+                Grid.Row="3"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Margin="8"
+                FontWeight="Bold"
+                Foreground="LightGray">
+                Пароль
+            </TextBlock>
+            <TextBox
+                Height="34"
+                Grid.Row="4"
+                Grid.Column="0"
+                VerticalContentAlignment="Center"
+                Grid.ColumnSpan="2" />
+
+            <CheckBox Grid.Row="5" Grid.Column="0" Margin="0,8,8,8" VerticalAlignment="Center">
+                <TextBlock FontWeight="Bold" Foreground="LightGray">Запомнить</TextBlock>
+            </CheckBox>
+
+            <Button  Style="{StaticResource ButtonStyleBlue}"  Height="34" Grid.Row="5" Grid.Column="1" Margin="8,8,0,8">Войти</Button>
+
+            <Button Grid.ColumnSpan="2" Style="{StaticResource ButtonStyleGreen}"  Height="34" Grid.Row="6" Grid.Column="0" Margin="0,0,0,0">Регистрация</Button>
+
+        </Grid>
+        
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="4">
+
+            <Button Style="{StaticResource ButtonStyleBlue}"  Height="34" Width="190" Grid.Row="5" Grid.Column="1" Margin="8" Command="{Binding CommandExit}">Выход</Button>
+
+        </StackPanel>
+
+    </Grid>
+
+</catel:UserControl>
